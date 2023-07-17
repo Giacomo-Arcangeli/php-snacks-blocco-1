@@ -7,7 +7,7 @@ $matches = [
         "away_goals" => 1
     ],
     [
-        "home_team" => "Juve",
+        "home_team" => "Juventus",
         "away_team" => "Napoli",
         "home_goals" => 2,
         "away_goals" => 1
@@ -24,6 +24,12 @@ $matches = [
         "home_goals" => 2,
         "away_goals" => 2
     ],
+    [
+        "home_team" => "Udinese",
+        "away_team" => "Sassuolo",
+        "home_goals" => 4,
+        "away_goals" => 2
+    ]
 ];
 ?>
 
@@ -39,8 +45,8 @@ $matches = [
     <h3>Risultati:</h3>
     <ul>
         <?php foreach ($matches as $match) : ?>
-        <li><?= $match ?></li>
-        <? endforeach ?>
+        <li><?= $match["home_team"] ?> | <?= $match["away_team"] ?> : <?= $match["home_goals"] ?> - <?= $match["away_goals"] ?></li>
+        <?php endforeach ?>
     </ul>
 </body>
 </html>
